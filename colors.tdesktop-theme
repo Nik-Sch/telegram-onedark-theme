@@ -17,11 +17,12 @@
 
 // Color presets //
 COLOR_GRAY: #ABB2BF;                            // #999999
-COLOR_DARK: #282c34;                            // Main color (dark one)
+COLOR_GRAY_OLD: #282c34;                            // Main color (dark one)
+COLOR_DARK: #27292f;
 COLOR_BLUE_DARK: #3E86B8;                      // Accent color
 COLOR_BLUE_LIGHT: #51afef;                     // Accent color #2 (just like first one with slight changes)
 COLOR_CYAN_RIPPLE_ACTIVE: #A7D685;
-
+COLOR_GREEN: #98C379;
 COLOR_WHITE: #bbc2cf;
 COLOR_BLACK: #1E2127;
 
@@ -51,7 +52,7 @@ imageBgTransparent: COLOR_WHITE;
 //widgets
 activeButtonBg: COLOR_BLUE_DARK;               // Currently selected button background
 activeButtonBgOver: #56B5C2;                    // Mouse over currently selected button background
-activeButtonBgRipple: COLOR_CYAN_RIPPLE_ACTIVE;// Primary button background color (and active chat) - Press & hold 
+activeButtonBgRipple: COLOR_BLUE_LIGHT;// Primary button background color (and active chat) - Press & hold
 activeButtonFg: COLOR_DARK;                    // Currently selected button text
 activeButtonFgOver: activeButtonFg;             // Mouse over currently selected button text
 activeButtonSecondaryFg: COLOR_WHITE;           // Counter color on primary button
@@ -59,7 +60,7 @@ activeButtonSecondaryFgOver: COLOR_WHITE;       // Counter color on primary butt
 activeLineFg: COLOR_BLUE_DARK;                 // Active input field line color (normal)
 activeLineFgError: #CC626A;                     // Active input field line color (error)
 
-lightButtonBg: COLOR_DARK;                      // Secondary button background color (default)
+lightButtonBg: COLOR_GRAY;                      // Secondary button background color (default)
 lightButtonBgOver: #434C59;                     // Secondary button background color (hover)
 lightButtonBgRipple: #2D323B;                   // Secondary button background color (press & hold)
 lightButtonFg: COLOR_WHITE;                     // Secondary button text color
@@ -114,7 +115,7 @@ titleBg: COLOR_DARK;                            // Title bar
 titleShadow: #00000003;
 titleButtonFg: #97A5AD;                         // Title bar buttons(min/max/close)
 titleButtonBgOver: #BDCBDB;                     // Title bar min/max background (hover)
-titleButtonFgOver: #838D9C;                     // Title bar min/max icons 
+titleButtonFgOver: #838D9C;                     // Title bar min/max icons
 titleButtonCloseBgOver: #E06C75;
 titleButtonCloseFgOver: COLOR_WHITE;
 titleFgActive: COLOR_WHITE;                         // Active title bar text (Mac)
@@ -124,7 +125,7 @@ titleFg: COLOR_GRAY;                               // Inactive title bar text (M
 trayCounterBg: #E06C75;                         // Unread messages counter background in tray (not muted, default red)
 trayCounterBgMute: #CC626A;                     // Unread messages counter background in tray (muted, default gray)
 trayCounterFg: COLOR_WHITE;                     // Unread messages counter text (number)
-trayCounterBgMacInvert: COLOR_WHITE;            
+trayCounterBgMacInvert: COLOR_WHITE;
 trayCounterFgMacInvert: COLOR_WHITE;
 
 // layers
@@ -158,7 +159,7 @@ contactsStatusFgOnline: windowActiveTextFg;
 
 photoCropFadeBg: layerBg;                       // "Out-of-bounds" area in photo cropping (avatars etc...)
 photoCropPointFg: COLOR_WHITE;                  // Photo crop "corners" (which you drag to crop photo)
- 
+
 // intro
 introBg: COLOR_DARK;
 introTitleFg: windowBoldFg;
@@ -189,7 +190,7 @@ dialogsSendingIconFg: #94A6B5;
 dialogsSentIconFg: COLOR_CYAN_RIPPLE_ACTIVE;
 dialogsUnreadBg: COLOR_BLUE_LIGHT;                       // Chats list unread counter background
 dialogsUnreadBgMuted: COLOR_GRAY;                  // Unread counter (for muted chats) + pins color(?)
-dialogsUnreadFg: COLOR_WHITE;                   // Unread counter text color
+dialogsUnreadFg: COLOR_DARK;                   // Unread counter text color
 
 dialogsBgOver: #374657;                         // Inactive chat color on hover
 dialogsNameFgOver: COLOR_WHITE;
@@ -206,12 +207,12 @@ dialogsUnreadBgOver: COLOR_BLUE_LIGHT;
 dialogsUnreadBgMutedOver: #999999;
 dialogsUnreadFgOver: COLOR_WHITE;
 
-dialogsBgActive: COLOR_BLUE_LIGHT;                       // Active chat color (in chats list)
-dialogsNameFgActive: COLOR_DARK;
-dialogsChatIconFgActive: COLOR_DARK;
-dialogsDateFgActive: COLOR_DARK;
-dialogsTextFgActive: COLOR_DARK;
-dialogsTextFgServiceActive: COLOR_DARK;
+dialogsBgActive: #2d3037;                       // Active chat color (in chats list)
+dialogsNameFgActive: COLOR_GREEN;
+dialogsChatIconFgActive: COLOR_GRAY;
+dialogsDateFgActive: COLOR_GRAY;
+dialogsTextFgActive: COLOR_GRAY;
+dialogsTextFgServiceActive: COLOR_BLUE_DARK;
 dialogsDraftFgActive: #CC626A;                  // "Draft" word when chat is selected
 dialogsVerifiedIconBgActive: COLOR_DARK;
 dialogsVerifiedIconFgActive: COLOR_DARK;
@@ -238,8 +239,8 @@ stickerPanDeleteBg: #000000cc;
 stickerPanDeleteFg: COLOR_WHITE;
 stickerPreviewBg: #28323BCC;                    // Sticker preview background
 
-historyTextInFg: #8699AD;                       // Incoming messages TEXT color
-historyTextOutFg: #ABB2BF;                      // Outgoing messages TEXT color
+historyTextInFg: COLOR_GRAY;                       // Incoming messages TEXT color
+historyTextOutFg: COLOR_WHITE;
 historyCaptionInFg: historyTextInFg;
 historyCaptionOutFg: historyTextOutFg;
 historyFileNameInFg: historyTextInFg;
@@ -285,9 +286,9 @@ historyScrollBarBgOver: #56B5C2bc;              // Scrollbar (history view) back
 historyScrollBg: #626D704d;                     // Scrollbar (history view) current position background
 historyScrollBgOver: #64707580;                 // Scrollbar (history view) current position background (hover)
 
-msgInBg: #343940;                               // Incoming message background
+msgInBg: #32353f;                               // Incoming message background
 msgInBgSelected: #222323;                       // Selected incoming message background
-msgOutBg: #3B4048;                              // Outgoing message background
+msgOutBg: #32353f;                              // Outgoing message background
 msgOutBgSelected: #222323;                      // Selected outgoing message background
 msgSelectOverlay: #2223239b;                    // Selected media (images...) overlay
 msgStickerOverlay: #2223237f;                   // Selected sticker overlay
@@ -312,7 +313,7 @@ msgOutReplyBarColor: COLOR_BLUE_DARK;          // Outgoing msg: vertical bar nex
 msgOutReplyBarSelColor: COLOR_BLUE_DARK;       // Outgoing msg: vertical bar next to reply (selected)
 msgInMonoFg: COLOR_BLUE_LIGHT;                 // Monowidth font / incoming msg
 msgOutMonoFg: COLOR_BLUE_LIGHT;                // Monowidth font / outgoing msg
-msgDateImgFg: msgServiceFg;						
+msgDateImgFg: msgServiceFg;
 msgDateImgBg: #00000054;                        // Download / play / etc overlay backgrounds
 msgDateImgBgOver: #00000074;                    // Mouse over download / play / etc overlay backgrounds
 msgDateImgBgSelected: #1c4a7187;
@@ -417,8 +418,8 @@ notificationSampleTextFg: #d7d7d7;
 notificationSampleNameFg: #939393;
 
 mainMenuBg: COLOR_DARK;                         // Left menu background (lower part, not buttons)
-mainMenuCoverBg: dialogsBgActive;               // Left menu background (upper part)
-mainMenuCoverFg: COLOR_DARK;
+mainMenuCoverBg: #32353f;               // Left menu background (upper part)
+mainMenuCoverFg: COLOR_GRAY;
 mediaPlayerBg: COLOR_DARK;                      // Music player background
 mediaPlayerActiveFg: COLOR_BLUE_DARK;          // Clickable Next song/Prev song button in music player
 mediaPlayerInactiveFg: #4f5151;                 // "Disabled" Next song/Prev song button in music player
